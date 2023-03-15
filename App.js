@@ -1,12 +1,15 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import React, { Component } from "react";
-import Counter from "./src/components/Counter.js";
+import Imagem from "./src/components/Imagem.js";
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Counter limite={10} limite2={-10} />
-      </View>
+      <ScrollView style={styles.container}>
+        <Imagem imagem="imagem1.jpg" />
+        <Imagem imagem="imagem2.jpeg" />
+        <Imagem imagem="imagem3.jpeg" />
+        <Imagem imagem="imagem4.jpg" />
+      </ScrollView>
     );
   }
 }
@@ -16,8 +19,6 @@ const styles = StyleSheet.create({
     top: 25,
     flex: 1,
     backgroundColor: "beige",
-    alignItems: "center",
-    justifyContent: "center",
     flexDirection: "column",
     width: "100%",
     margin: 0,
