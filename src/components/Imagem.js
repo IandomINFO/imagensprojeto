@@ -49,13 +49,10 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  View: {
-    margin: 0,
-  },
   imagem: {
     width: 200,
-    height: 300,
-    resizeMode: "contain",
+    height: 200,
+    resizeMode: "stretch",
     borderColor: "blue",
     borderRadius: 20,
   },
@@ -68,6 +65,11 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     marginBottom: 10,
     alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "lightgrey",
+    width: 300,
+    height: 300,
+    margin: 10,
   },
   botao: {
     marginLeft: 10,
