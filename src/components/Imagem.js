@@ -20,7 +20,9 @@ export default class App extends Component {
         <View>
           <Image
             style={styles.imagem}
-            source={require("../../assets/images/imagem4.jpg")}
+            source={{
+              uri: this.props.imagem,
+            }}
           />
         </View>
         <Text>Curtidas: {this.state.contadordelikes}</Text>
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
   imagem: {
     width: 200,
     height: 300,
-    resizeMode: "stretch",
+    resizeMode: "contain",
     borderColor: "blue",
     borderRadius: 20,
   },

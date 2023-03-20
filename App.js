@@ -5,10 +5,10 @@ export default class App extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Imagem imagem="imagem1.jpg" />
-        <Imagem imagem="imagem2.jpeg" />
-        <Imagem imagem="imagem3.jpeg" />
-        <Imagem imagem="imagem4.jpg" />
+        <Imagem imagem="https://www.petz.com.br/blog/wp-content/uploads/2017/04/comportamento-dos-gatos-1.jpg" />
+        <Imagem imagem="https://i.pinimg.com/originals/72/73/2d/72732d2a5b02ea432a88ddb0902df1a4.jpg" />
+        <Imagem imagem="https://www.chickensmoothie.com/oekaki/image/image.php?id=4114537&size=large&format=auto&rev=1675343459" />
+        <Imagem imagem="https://i1.sndcdn.com/artworks-FZYtcnfgLHJp52Q2-lEfruQ-t500x500.jpg" />
       </ScrollView>
     );
   }
