@@ -64,10 +64,10 @@ export default class App extends Component {
         <Text style={{ color: "#dfe0e2", fontSize: 30 }}>
           Biblioteca de Imagens
         </Text>
-        <View style={{ flexDirection: "row", alignItems: "center " }}>
+        <View style={{ flexDirection: "column" }}>
           <TextInput
             style={{
-              marginRight: 10,
+              marginBottom: 10,
               height: 40,
               backgroundColor: "azure",
               fontSize: 20,
@@ -81,7 +81,7 @@ export default class App extends Component {
               height: 40,
               backgroundColor: "azure",
               fontSize: 20,
-              marginRight: 10,
+              marginBottom: 10,
             }}
             placeholder="URL da imagem"
             inputMode="text"
