@@ -34,26 +34,8 @@ export default class App extends Component {
       {
         id: 4,
         imagem:
-          "https://i1.sndcdn.com/artworks-FZYtcnfgLHJp52Q2-lEfruQ-t500x500.jpg",
-        titulo: "Let me do it for you",
-      },
-      {
-        id: 5,
-        imagem:
-          "https://i1.sndcdn.com/artworks-FZYtcnfgLHJp52Q2-lEfruQ-t500x500.jpg",
-        titulo: "Let me do it for you",
-      },
-      {
-        id: 6,
-        imagem:
-          "https://i1.sndcdn.com/artworks-FZYtcnfgLHJp52Q2-lEfruQ-t500x500.jpg",
-        titulo: "Let me do it for you",
-      },
-      {
-        id: 7,
-        imagem:
-          "https://i1.sndcdn.com/artworks-FZYtcnfgLHJp52Q2-lEfruQ-t500x500.jpg",
-        titulo: "Let me do it for you",
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
       },
     ],
   };
