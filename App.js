@@ -1,9 +1,17 @@
-import { StyleSheet, ScrollView, View, Text } from "react-native";
+import {
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import React, { Component } from "react";
 import Imagem from "./src/components/Imagem.js";
 export default class App extends Component {
   state = {
-    a: 0,
+    imagemURL: "",
+    imagemTITULO: "",
     urls: [
       {
         id: 1,
@@ -56,6 +64,17 @@ export default class App extends Component {
       this.setState({ urls: this.state.urls });
     }
   }
+  adicionar() {
+    this.state.urls.push({
+      id: this.state.urls.length + 2,
+      imagem: this.state.imagemURL,
+      titulo: this.state.imagemTITULO,
+    });
+    this.setState({ urls: this.state.urls });
+  }
+  teste() {
+    console.log(this.state.urls);
+  }
 
   render() {
     return (
@@ -63,6 +82,37 @@ export default class App extends Component {
         <Text style={{ color: "#dfe0e2", fontSize: 30 }}>
           Biblioteca de Imagens
         </Text>
+        <View style={{ flexDirection: "row", alignItems: "center " }}>
+          <TextInput
+            style={{
+              marginRight: 10,
+              height: 40,
+              backgroundColor: "azure",
+              fontSize: 20,
+            }}
+            placeholder="Titulo da Imagem"
+            inputMode="text"
+            onChangeText={(imagemTITULO) => this.setState({ imagemTITULO })}
+          />
+          <TextInput
+            style={{
+              height: 40,
+              backgroundColor: "azure",
+              fontSize: 20,
+              marginRight: 10,
+            }}
+            placeholder="URL da imagem"
+            inputMode="text"
+            onChangeText={(imagemURL) => this.setState({ imagemURL })}
+          />
+
+          <TouchableOpacity
+            style={styles.botao}
+            onPress={() => this.adicionar()}
+          >
+            <Text style={{ fontSize: 20 }}> Adicionar </Text>
+          </TouchableOpacity>
+        </View>
         <ScrollView>
           <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
             {this.state.urls.map((link) => (
@@ -92,9 +142,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   botao: {
-    marginLeft: 5,
     padding: 2,
-    backgroundColor: "deepskyblue",
+    backgroundColor: "lightgreen",
     color: "white",
+    minWidth: 70,
+    minHeight: 20,
   },
 });
