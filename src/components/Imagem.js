@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { Component } from "react";
-export default class App extends Component {
+export default class Imagem extends Component {
   state = {
     contadordelikes: 0,
   };
@@ -9,9 +9,6 @@ export default class App extends Component {
   }
   decrementar() {
     this.setState({ contadordelikes: this.state.contadordelikes - 1 });
-  }
-  deletar() {
-    this.setState({ contadordelikes: 0 });
   }
 
   render() {
@@ -45,7 +42,7 @@ export default class App extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.botaoAlerta}
-            onPress={() => this.props.deletar}
+            onPress={() => this.props.deletar()}
           >
             <Text> Deletar </Text>
           </TouchableOpacity>
