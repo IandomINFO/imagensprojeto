@@ -109,9 +109,6 @@ export default class App extends Component {
     });
     this.setState({ urls: this.state.urls });
   }
-  teste() {
-    console.log(this.state.urls);
-  }
 
   render() {
     return (
