@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
   },
   main: {
     flexDirection: "column",
-    marginBottom: 10,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#dfe0e2",

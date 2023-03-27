@@ -1,13 +1,8 @@
-import {
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
-import React, { Component } from "react";
+import { StyleSheet, ScrollView, View } from "react-native";
+import { Component } from "react";
 import Imagem from "./src/components/Imagem.js";
+import Header from "./src/components/Header.js";
+
 export default class App extends Component {
   state = {
     imagemURL: "",
@@ -37,6 +32,60 @@ export default class App extends Component {
           "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
         titulo: "pato.",
       },
+      {
+        id: 5,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 6,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 7,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 8,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 9,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 10,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 11,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 12,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
+      {
+        id: 13,
+        imagem:
+          "https://www.petz.com.br/blog/wp-content/uploads/2021/08/pato-de-estimacao-1280x720.jpg",
+        titulo: "pato.",
+      },
     ],
   };
   deletar(url) {
@@ -61,42 +110,17 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{ color: "#dfe0e2", fontSize: 30 }}>
-          Biblioteca de Imagens
-        </Text>
-        <View style={{ flexDirection: "column" }}>
-          <TextInput
-            style={{
-              marginBottom: 10,
-              height: 40,
-              backgroundColor: "azure",
-              fontSize: 20,
-            }}
-            placeholder="Titulo da Imagem"
-            inputMode="text"
-            onChangeText={(imagemTITULO) => this.setState({ imagemTITULO })}
-          />
-          <TextInput
-            style={{
-              height: 40,
-              backgroundColor: "azure",
-              fontSize: 20,
-              marginBottom: 10,
-            }}
-            placeholder="URL da imagem"
-            inputMode="text"
-            onChangeText={(imagemURL) => this.setState({ imagemURL })}
-          />
-
-          <TouchableOpacity
-            style={styles.botao}
-            onPress={() => this.adicionar()}
-          >
-            <Text style={{ fontSize: 20 }}> Adicionar </Text>
-          </TouchableOpacity>
-        </View>
         <ScrollView>
-          <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+          <Header />
+
+          <View
+            style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              alignContent: "center",
+              justifyContent: "center",
+            }}
+          >
             {this.state.urls.map((link) => (
               <Imagem
                 deletar={() => this.deletar(link)}
@@ -118,16 +142,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#010a13",
     flexDirection: "column",
-    width: "100%",
-    margin: 0,
     alignItems: "center",
     justifyContent: "center",
-  },
-  botao: {
-    padding: 2,
-    backgroundColor: "lightgreen",
-    color: "white",
-    minWidth: 70,
-    minHeight: 20,
   },
 });
