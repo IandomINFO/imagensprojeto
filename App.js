@@ -1,7 +1,13 @@
-import { StyleSheet, ScrollView, View } from "react-native";
+import {
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { Component } from "react";
 import Imagem from "./src/components/Imagem.js";
-import Header from "./src/components/Header.js";
 
 export default class App extends Component {
   state = {
@@ -111,8 +117,33 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <ScrollView>
-          <Header />
-
+          <View style={styles.header}>
+            <Text style={{ color: "#dfe0e2", fontSize: 30, marginBottom: 10 }}>
+              Biblioteca de Imagens
+            </Text>
+            <View style={{ flexDirection: "row", marginBottom: 10 }}>
+              <TextInput
+                style={styles.textinput}
+                placeholder="Titulo da Imagem"
+                inputMode="text"
+                onChangeText={(imagemTITULO) => this.setState({ imagemTITULO })}
+              />
+              <TextInput
+                style={styles.textinput}
+                placeholder="URL da imagem"
+                inputMode="url"
+                onChangeText={(imagemURL) => this.setState({ imagemURL })}
+              />
+            </View>
+            <View>
+              <TouchableOpacity
+                style={styles.botao}
+                onPress={() => this.adicionar()}
+              >
+                <Text style={{ fontSize: 20 }}> Adicionar </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
           <View
             style={{
               flexDirection: "row",
@@ -144,5 +175,30 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+  },
+  header: {
+    paddingTop: 50,
+    flex: 1,
+    backgroundColor: "#010a13",
+    flexDirection: "column",
+    width: "100%",
+    margin: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 10,
+  },
+  botao: {
+    padding: 5,
+    backgroundColor: "lightgreen",
+    color: "white",
+    alignSelf: "center",
+  },
+  textinput: {
+    marginRight: 10,
+    height: 40,
+    backgroundColor: "azure",
+    fontSize: 20,
+    padding: 10,
+    maxWidth: 180,
   },
 });

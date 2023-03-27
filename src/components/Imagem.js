@@ -72,6 +72,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#dfe0e2",
     minWidth: 156,
     minHeight: 156,
+    maxHeigh: 156,
+    maxWidth: 156,
     margin: 10,
   },
   botao: {
