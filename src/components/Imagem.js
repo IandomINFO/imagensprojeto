@@ -24,7 +24,7 @@ export default class Imagem extends Component {
           />
         </View>
 
-        <Text style={{ color: "#000000", marginBottom: 10, marginTop: 10 }}>
+        <Text style={{ color: "#000000" }}>
           Curtidas: {this.state.contadordelikes}
         </Text>
         <View style={styles.botoes}>
@@ -68,12 +68,12 @@ const styles = StyleSheet.create({
   main: {
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
     backgroundColor: "#dfe0e2",
     minWidth: 156,
     minHeight: 156,
-    maxHeigh: 156,
-    maxWidth: 156,
+    maxHeigh: 196,
+    maxWidth: 196,
     margin: 10,
   },
   botao: {
@@ -94,5 +94,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     margin: 5,
     color: "#000000",
+    textAlign: "center",
   },
 });
